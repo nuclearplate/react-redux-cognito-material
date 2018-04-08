@@ -1,0 +1,28 @@
+{
+  "presets": [
+    "es2015",
+    "react",
+    "stage-1",
+    "stage-0",
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "react-hmre"
+      ],
+      "plugins": [
+        "transform-async-to-generator",
+        ["transform-runtime", {
+          "polyfill": true,
+          "regenerator": true
+        }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
+}
